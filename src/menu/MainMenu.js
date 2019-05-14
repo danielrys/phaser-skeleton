@@ -1,5 +1,6 @@
 import Phaser from "phaser"
 import config from "../config/config"
+import ButtonFactory from "../ui/ButtonFactory"
 
 class MainMenu extends Phaser.Scene {
   constructor() {
@@ -9,8 +10,15 @@ class MainMenu extends Phaser.Scene {
     })
   }
 
+  onPlay() {}
+
   create() {
-    // @TODO menu UI
+    ButtonFactory.createButton(this, {
+      x: 250, // @TODO real coords
+      y: 250, // @TODO real coords
+      text: "Play", // @TODO translations
+      callback: this.onPlay
+    })
   }
 }
 

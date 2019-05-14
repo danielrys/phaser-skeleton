@@ -10,6 +10,10 @@ class SplashScreen extends Phaser.Scene {
   }
 
   create() {
+    this.add.text(150, 150, "Splashscreen", {
+      font: "112px Courier",
+      fill: "#555555"
+    }) // placeholder, @TODO remove
     // @TODO loading bar, splashscreen graphics...
   }
 }
