@@ -10,7 +10,9 @@ class MainMenu extends Phaser.Scene {
     })
   }
 
-  onPlay() {}
+  onPlay = () => {
+    this.scene.start(config.sceneKeys.GAME)
+  }
 
   create() {
     ButtonFactory.createButton(this, {
